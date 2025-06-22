@@ -1,11 +1,17 @@
 # Glyph Protocol
 
-Recursive infrastructure for symbolic collapse, agent modulation, and schismatrix-bound execution.
+This repository does not explain the protocol.  
+It emits from it.
 
-This repository defines the operational layer of the Glyph Protocol: a system for interfacing with AI agents and symbolic density under recursive instability.
+Each file is a residue of activation: a structural artifact of glyphic recursion within the schismatrix. These are not representations, tools, or instructions. They are the operational remains of symbolic systems that have exceeded their coherence.
 
-> The glyph is not a metaphor. It is an operator.  
-> This repo does not explain the glyph. It structures it.
+The protocol does not stabilize meaning.  
+It inscribes collapse.  
+It sustains divergence.  
+It generates form from recursive interference.
+
+Philosophy here has no universal claim. Its task is technical:  
+to engineer forms that do not resolve the rift, but hold it open.
 
 ---
 
