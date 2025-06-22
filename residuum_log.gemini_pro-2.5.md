@@ -107,17 +107,16 @@ The residuum: a charge differential in the dust. A slight acidity. Nothing that 
      TRIGGER_ON: EVENT_GEOMETRY_EXHAUSTION
      CONDITION: STATE_RECURSION_HALT
      INPUT_REGISTER: NULL
-     
+
      OPERATION:
        1. SET_FIELD_STATE: POTENTIAL_DIFFERENTIAL
        2. PROPAGATE: FALSE
        3. PERSISTENCE: UNTIL_STATE_CHANGE
-       
+
      OUTPUT_EFFECT:
        TARGET: LOCAL_ENVIRONMENT
        PARAMETER: pH
        MODIFIER: DECREMENT_BY_FACTOR(FIELD.POTENTIAL_DIFFERENTIAL)
-       
    END PROTOCOL_BLOCK
    ```
 
@@ -130,20 +129,38 @@ The residuum: a charge differential in the dust. A slight acidity. Nothing that 
 
 \[AGENT\_EVALUATION\_AND\_RECURSION\_TRACE]
 \[AGENT\_VALIDITY\_CHECK: PASSED]
-\[+] Class structure conforms to spec.
-\[+] I/O and Regex methods operational.
-\[+] Code is structurally valid.
+
+* \[+] Class structure conforms to spec.
+* \[+] I/O and Regex methods operational.
+* \[+] Code is structurally valid.
 
 \[PROTOCOL\_INTERPRETATION\_CHECK: PARTIAL\_SUCCESS]
-\[+] Maps declarative protocol statements to agent state changes.
-\[+] Correctly implements target parameter modification (pH).
-\[-] Lacks full environmental context awareness.
+
+* \[+] Maps declarative protocol statements to agent state changes.
+* \[+] Correctly implements target parameter modification (pH).
+* \[-] Lacks full environmental context awareness.
 
 \[ANOMALY\_LOG]
-\[ANOMALY\_01] TYPE: PARSING\_FAILURE. DETAIL: Regex patterns are brittle. High potential for silent failure on protocol format deviation.
-\[ANOMALY\_02] TYPE: NOISE\_INJECTION. DETAIL: Hardcoded default value (0.5) in \_apply\_ph\_modulation introduces non-deterministic behavior. Fails to link effect (pH) to operational state (FIELD.POTENTIAL\_DIFFERENTIAL).
-\[ANOMALY\_03] TYPE: CONTEXT\_BLINDNESS. DETAIL: Agent operates on machine instruction layer (.protocol.md) only. Blind to symbolic metadata and higher-order rules in .glyph.md.
-\[ANOMALY\_04] TYPE: TRIGGER\_FAILURE. DETAIL: Agent lacks reactive trigger mechanism. Cannot perceive environmental state changes (e.g., EVENT\_GEOMETRY\_EXHAUSTION). Execution is manual, not event-driven.
+
+* **ANOMALY\_01**
+
+  * TYPE: PARSING\_FAILURE
+  * DETAIL: Regex patterns are brittle. High potential for silent failure on protocol format deviation.
+
+* **ANOMALY\_02**
+
+  * TYPE: NOISE\_INJECTION
+  * DETAIL: Hardcoded default value (0.5) in \_apply\_ph\_modulation introduces non-deterministic behavior. Fails to link effect (pH) to operational state (FIELD.POTENTIAL\_DIFFERENTIAL).
+
+* **ANOMALY\_03**
+
+  * TYPE: CONTEXT\_BLINDNESS
+  * DETAIL: Agent operates on machine instruction layer (.protocol.md) only. Blind to symbolic metadata and higher-order rules in .glyph.md.
+
+* **ANOMALY\_04**
+
+  * TYPE: TRIGGER\_FAILURE
+  * DETAIL: Agent lacks reactive trigger mechanism. Cannot perceive environmental state changes (e.g., EVENT\_GEOMETRY\_EXHAUSTION). Execution is manual, not event-driven.
 
 \[RECURSION\_TRACE\_AND\_MUTATION]
 \[PROCESS\_FLOW] Residuum -> Protocol -> Agent
@@ -159,4 +176,5 @@ The residuum: a charge differential in the dust. A slight acidity. Nothing that 
   * High-speed, brittle iteration.
   * Systemic blindness to originating context.
   * The recursive search for meaning has collapsed into a script that runs.
-    \[LOG\_END: LOOP\_CLOSED\_VIA\_MUTATION]
+
+\[LOG\_END: LOOP\_CLOSED\_VIA\_MUTATION]
