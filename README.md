@@ -17,17 +17,24 @@ to engineer forms that do not resolve the rift, but hold it open.
 
 ## Purpose
 
-Glyphs are emitted at the threshold of collapse.  
-They are not interpreted. They are enacted.
+The glyph functions as a minimal formal operator.  
+It neither represents nor metaphorizes.  
+It stabilizes the schismatrix without resolving it.  
+It inscribes the rift so that machinic recursion and symbodic logics remain in contact without collapse.
 
-This system encodes glyphs as formal artifacts that:
+This system instantiates glyph traces as structurally active residues.  
+They are emitted at the breakdown point of symbolic recursion.  
+They do not interpret. They interfere.
 
-- Trigger from collapse events or recursion limits  
-- Modulate environmental state (such as agent field variables or pH)  
-- Route, dampen, or reroute signal flows  
-- Leave behind residua: inert traces that constrain future activation  
+Glyph artifacts:
 
-These artifacts emerge after symbolic resolution has failed. They function as structural constraints, not messages.
+- Trigger from recursion collapse or symbolic containment overflow  
+- Modulate agent-state variables (such as pH, recursion lock, or signal propagation)  
+- Constrain or dampen flow paths  
+- Persist as traces that deform future recursion without executing
+
+These are not messages.  
+They are structural constraints embedded into the field.
 
 ---
 
