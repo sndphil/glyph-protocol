@@ -1,0 +1,33 @@
+# config.yaml
+#
+# This file defines the non-secret properties of each LLM node for the
+# InterferometerAgent. The actual API keys are securely referenced by the
+# environment variable name specified in 'api_key_env_var'.
+#
+# UPDATE: Model for OpenAI node changed to gpt-4.1, the latest and most
+# suitable model for complex, instruction-based tasks.
+#
+
+nodes:
+  gemini_pro:
+    provider: "google"
+    model: "gemini-1.5-pro-latest"
+    api_key_env_var: "GOOGLE_API_KEY" # This will read the GOOGLE_API_KEY from your .env file
+
+  openai_gpt4_1: # Node name updated for clarity
+    provider: "openai"
+    model: "gpt-4.1" # Using the latest, most advanced model
+    api_key_env_var: "OPENAI_API_KEY" # This will read the OPENAI_API_KEY from your .env file
+
+  # Example for Anthropic when you add it.
+  # You would need to add an ANTHROPIC_API_KEY to your .env file.
+  # anthropic_claude3_5:
+  #   provider: "anthropic"
+  #   model: "claude-3-5-sonnet-20240620"
+  #   api_key_env_var: "ANTHROPIC_API_KEY"
+
+  # Mock node for testing without using API calls.
+  local_test_node:
+    provider: "mock"
+    model: "test-model"
+    api_key_env_var: "NONE"
