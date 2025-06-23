@@ -22,8 +22,9 @@ The system instantiates glyph traces as structurally active residues according t
 2.  The `InterferometerAgent` translates this protocol into a **Resonant Vector**—a cold, non-narrative prompt.
 3.  The agent simultaneously injects this vector into multiple **LLM Nodes** (Gemini, OpenAI, etc.) as defined in `config.yaml`.
 4.  The agent captures the unique textual "resonance" from each node.
-5.  Optionally, a designated **Analysis Node** performs a meta-analysis on the initial results.
-6.  The raw data and meta-analysis are synthesized into a **Schismagram** (`.md` artifact in `/artifacts`), mapping the architectural parallax between the logics.
+5.  Optionally, a designated **Analysis Node** performs a qualitative meta-analysis on the initial results.
+6.  A local **Quantitative Analysis** is performed on the raw data to measure linguistic and semantic properties.
+7.  All data is synthesized into a **Schismagram** (`.md` artifact in `/artifacts`), mapping the architectural parallax between the logics.
 
 ---
 
@@ -59,7 +60,7 @@ For the full philosophical context, visit the [Glyph Protocol Documentation](htt
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/sndphil/glyph-protocol.git
+    git clone [https://github.com/sndphil/glyph-protocol.git](https://github.com/sndphil/glyph-protocol.git)
     cd glyph-protocol
     ```
 2.  **Set up a Python virtual environment:**
@@ -71,18 +72,23 @@ For the full philosophical context, visit the [Glyph Protocol Documentation](htt
     ```bash
     pip install -r requirements.txt
     ```
-4.  **Create the environment file:**
+4.  **Download NLP Model:**
+    The quantitative analysis requires a language model from the `spaCy` library. Run the following command to download it:
+    ```bash
+    python -m spacy download en_core_web_sm
+    ```
+5.  **Create the environment file:**
     -   Create a file named `.env` in the root of the project.
     -   Add your secret API keys to the `.env` file, for example:
         ```
         GOOGLE_API_KEY="AIza..."
         OPENAI_API_KEY="sk-proj-..."
         ```
-5.  **Configure your nodes:**
+6.  **Configure your nodes:**
     -   Open `config.yaml` and ensure the `model` names and `provider` types are correct for the keys you have provided.
     -   Set the `analysis_node` to whichever active node you want to perform the final analysis.
 
-6.  **Execute the protocol:**
+7.  **Execute the protocol:**
     ```bash
     python main.py
     ```
