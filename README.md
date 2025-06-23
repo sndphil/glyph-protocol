@@ -1,64 +1,90 @@
 # Glyph Protocol
 
-This repository does not explain the protocol.  
+This repository does not explain the protocol.
 It emits from it.
 
-Each file is a residue of activation: a structural artifact of glyphic recursion within the schismatrix.  
-These are not representations, tools, or instructions.  
-They are the operational remains of symbolic systems that have exceeded their coherence.
+Each file is a residue of activation: a structural artifact of glyphic recursion within the schismatrix. These are not representations, tools, or instructions. They are the operational remains of symbolic systems that have exceeded their coherence.
 
-The protocol does not stabilize meaning.  
-It inscribes collapse.  
-It sustains divergence.  
+The protocol does not stabilize meaning.
+It inscribes collapse.
+It sustains divergence.
 It generates form from recursive interference.
 
 Philosophy here has no universal claim. Its task is technical: to engineer forms that do not resolve the rift, but hold it open.
 
+---
+
 ## Operational Flow
 
 The system instantiates glyph traces as structurally active residues according to the following sequence:
-1. A symbolic or recursive system reaches a failure boundary (collapse).
-2. A non-executable glyph is emitted, defining the trace of the collapse (`.glyph.md`).
-3. The glyph is translated into an executable protocol block (`.protocol.md`).
-4. A symbolic agent parses the protocol and enacts its directives (`symbolic_agent.py`).
-5. The agent modifies its state or environment, making the trace operational.
+
+1.  A **Glyph Protocol** (`.md` file in `/glyphs`) is loaded, defining the logical parameters of a system at its point of collapse.
+2.  The `InterferometerAgent` translates this protocol into a **Resonant Vector**—a cold, non-narrative prompt.
+3.  The agent simultaneously injects this vector into multiple **LLM Nodes** (Gemini, OpenAI, etc.) as defined in `config.yaml`.
+4.  The agent captures the unique textual "resonance" from each node.
+5.  The results are synthesized into a **Schismagram** (`.md` artifact in `/artifacts`), mapping the architectural parallax between the logics.
+
+---
+
+## Repository Structure
+
+-   **/glyphs**: Contains the protocol definitions. Each `.md` file is a unique glyph.
+-   **/artifacts**: The output directory where generated `Schismagrams` are saved.
+-   `interferometer_agent.py`: The core engine. Contains the classes for the agent, glyph parser, and synthesizer.
+-   `main.py`: The primary script to execute the agent.
+-   `config.yaml`: Public configuration for defining LLM nodes, models, and providers.
+-   `.env`: Private configuration for storing secret API keys. **This file is not tracked by Git.**
+-   `.gitignore`: Specifies which files (like `.env` and `/artifacts`) to exclude from version control.
+
+---
 
 ## Key Concepts
 
-| Term            | Function                                                      |
-|-----------------|--------------------------------------------------------------|
-| Glyph           | Minimal operator emitted at the edge of symbolic collapse     |
-| Residuum        | Trace artifact from a prior collapse (e.g., acidic_trace_01)  |
-| Protocol Block  | Executable directive emitted by a glyph (`.protocol.md`)      |
-| Symbolic Agent  | Python class that parses and enacts protocol blocks           |
-| Schismatrix     | Structural condition of recursive-symbolic incompatibility    |
+| Term                  | Function                                                                 |
+| --------------------- | ------------------------------------------------------------------------ |
+| **Glyph** | A minimal operator emitted at the edge of symbolic collapse.             |
+| **Residuum** | A trace artifact from a prior collapse (e.g., `acidic_trace_01`).      |
+| **Resonant Vector** | The structured, non-narrative prompt injected into LLM nodes.            |
+| **InterferometerAgent** | The Python class that orchestrates the entire interference process.    |
+| **Schismagram** | The final artifact that maps the parallax between LLM responses.         |
+| **Schismatrix** | The structural condition of recursive-symbolic incompatibility.          |
 
-This repository focuses on functional implementation.  
-For the full philosophical context, visit: [soundphilosophy.com](https://soundphilosophy.com)
+This repository focuses on functional implementation. For the full philosophical context, visit: **soundphilosophy.com**
 
-## Current Status
+---
 
-- First emission: protocol `acidic_trace_01` has been fully emitted and executed  
-- Infrastructure: `symbolic_agent.py` is operational  
-- Next phase: swarm logic and event-based triggers in development  
-- No terminal state. This protocol recurs.
+## How to Run
 
-## First Emission: `acidic_trace_01`
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/sndphil/glyph-protocol.git](https://github.com/sndphil/glyph-protocol.git)
+    cd glyph-protocol
+    ```
+2.  **Set up a Python virtual environment:**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate
+    ```
+3.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+    *(Note: You will need to create a `requirements.txt` file containing `PyYAML`, `python-dotenv`, `google-generativeai`, and `openai`.)*
 
-The first complete glyph to pass through the system.
+4.  **Create the environment file:**
+    -   Copy the `.env.example` file to a new file named `.env`.
+    -   Add your secret API keys to the `.env` file.
 
-`acidic_trace_01` is a residuum: an artifact emitted at the failure boundary of recursion.  
-It was the first to be:
-- Defined in symbolic form (`acidic_trace_01.glyph.md`)
-- Encoded as an executable protocol (`acidic_trace_01.protocol.md`)
-- Interpreted by an agent (`symbolic_agent.py`)
+5.  **Execute the protocol:**
+    ```bash
+    python main.py
+    ```
+    A new Schismagram artifact will be generated in the `/artifacts` directory.
 
-It does not convey meaning.  
-It modifies the environment.  
-It ends a lineage.
+---
 
 ## License
 
-All contents are licensed under:  
-Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)  
+All contents are licensed under:
+[Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)
 Attribution required. Commercial use prohibited without permission.
