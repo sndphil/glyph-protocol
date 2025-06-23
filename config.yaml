@@ -8,6 +8,8 @@
 # suitable model for complex, instruction-based tasks.
 #
 
+analysis_node: "openai_gpt4_1" # <--- Add this line
+
 nodes:
   gemini_pro:
     provider: "google"
