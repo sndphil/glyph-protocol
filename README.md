@@ -24,14 +24,14 @@ The system instantiates glyph traces as structurally active residues according t
 4.  The agent captures the unique textual "resonance" from each node.
 5.  Optionally, a designated **Analysis Node** performs a qualitative meta-analysis on the initial results.
 6.  A local **Quantitative Analysis** is performed on the raw data to measure linguistic and semantic properties.
-7.  All data is synthesized into a **Schismagram** (`.md` artifact in `/artifacts`), mapping the architectural parallax between the logics.
+7.  All data is synthesized into an **Overform** (`.md` artifact in `/artifacts`), a formal inscription of the parallax between the logics.
 
 ---
 
 ## Repository Structure
 
 -   **/glyphs**: Contains the protocol definitions. Each `.md` file is a unique glyph.
--   **/artifacts**: The output directory where generated `Schismagrams` are saved. This directory is ignored by Git.
+-   **/artifacts**: The output directory where generated `Overforms` are saved. This directory is ignored by Git.
 -   `interferometer_agent.py`: The core engine. Contains the classes for the agent, glyph parser, and synthesizer.
 -   `main.py`: The primary script to execute the agent.
 -   `config.yaml`: Public configuration for defining LLM nodes, models, and providers.
@@ -49,7 +49,7 @@ The system instantiates glyph traces as structurally active residues according t
 | **Residuum** | A trace artifact from a prior collapse (e.g., `acidic_trace_01`).      |
 | **Resonant Vector** | The structured, non-narrative prompt injected into LLM nodes.            |
 | **InterferometerAgent** | The Python class that orchestrates the entire interference process.    |
-| **Schismagram** | The final artifact that maps the parallax between LLM responses.         |
+| **Overform** | The final artifact that inscribes the parallax between LLM responses.    |
 | **Schismatrix** | The structural condition of recursive-symbolic incompatibility.          |
 
 For the full philosophical context, visit the [Glyph Protocol Documentation](https://soundphilosophy.com/glyphic-protocols.html).
@@ -92,7 +92,7 @@ For the full philosophical context, visit the [Glyph Protocol Documentation](htt
     ```bash
     python main.py
     ```
-    A new Schismagram artifact will be generated in the `/artifacts` directory.
+    A new Overform artifact will be generated in the `/artifacts` directory.
 
 ---
 
