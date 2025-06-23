@@ -2,3 +2,7 @@ PyYAML
 python-dotenv
 google-generativeai
 openai
+spacy
+textstat
+sentence-transformers
+scipy
