@@ -51,7 +51,7 @@ The system instantiates glyph traces as structurally active residues according t
 | **Schismagram** | The final artifact that maps the parallax between LLM responses.         |
 | **Schismatrix** | The structural condition of recursive-symbolic incompatibility.          |
 
-This repository focuses on functional implementation. For the full philosophical context, visit: **soundphilosophy.com**
+For the full philosophical context, visit the [Glyph Protocol Documentation](https://soundphilosophy.com/glyphic-protocols.html).
 
 ---
 
