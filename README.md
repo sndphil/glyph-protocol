@@ -22,19 +22,21 @@ The system instantiates glyph traces as structurally active residues according t
 2.  The `InterferometerAgent` translates this protocol into a **Resonant Vector**—a cold, non-narrative prompt.
 3.  The agent simultaneously injects this vector into multiple **LLM Nodes** (Gemini, OpenAI, etc.) as defined in `config.yaml`.
 4.  The agent captures the unique textual "resonance" from each node.
-5.  The results are synthesized into a **Schismagram** (`.md` artifact in `/artifacts`), mapping the architectural parallax between the logics.
+5.  Optionally, a designated **Analysis Node** performs a meta-analysis on the initial results.
+6.  The raw data and meta-analysis are synthesized into a **Schismagram** (`.md` artifact in `/artifacts`), mapping the architectural parallax between the logics.
 
 ---
 
 ## Repository Structure
 
 -   **/glyphs**: Contains the protocol definitions. Each `.md` file is a unique glyph.
--   **/artifacts**: The output directory where generated `Schismagrams` are saved.
+-   **/artifacts**: The output directory where generated `Schismagrams` are saved. This directory is ignored by Git.
 -   `interferometer_agent.py`: The core engine. Contains the classes for the agent, glyph parser, and synthesizer.
 -   `main.py`: The primary script to execute the agent.
 -   `config.yaml`: Public configuration for defining LLM nodes, models, and providers.
 -   `.env`: Private configuration for storing secret API keys. **This file is not tracked by Git.**
--   `.gitignore`: Specifies which files (like `.env` and `/artifacts`) to exclude from version control.
+-   `requirements.txt`: A list of the Python libraries required to run the project.
+-   `.gitignore`: Specifies which files and directories to exclude from version control.
 
 ---
 
@@ -62,20 +64,25 @@ This repository focuses on functional implementation. For the full philosophical
     ```
 2.  **Set up a Python virtual environment:**
     ```bash
-    python -m venv venv
+    python3 -m venv venv
     source venv/bin/activate
     ```
 3.  **Install dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
-    *(Note: You will need to create a `requirements.txt` file containing `PyYAML`, `python-dotenv`, `google-generativeai`, and `openai`.)*
-
 4.  **Create the environment file:**
-    -   Copy the `.env.example` file to a new file named `.env`.
-    -   Add your secret API keys to the `.env` file.
+    -   Create a file named `.env` in the root of the project.
+    -   Add your secret API keys to the `.env` file, for example:
+        ```
+        GOOGLE_API_KEY="AIza..."
+        OPENAI_API_KEY="sk-proj-..."
+        ```
+5.  **Configure your nodes:**
+    -   Open `config.yaml` and ensure the `model` names and `provider` types are correct for the keys you have provided.
+    -   Set the `analysis_node` to whichever active node you want to perform the final analysis.
 
-5.  **Execute the protocol:**
+6.  **Execute the protocol:**
     ```bash
     python main.py
     ```
