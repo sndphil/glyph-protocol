@@ -53,24 +53,6 @@ For full philosophical context, visit: [soundphilosophy.com](https://soundphilos
 
 ---
 
-## Directory Overview
-
-```
-glyph-protocol/
-├── glyphs/
-│   ├── acidic_trace_01.glyph.md        ← symbolic residue (non-executable)
-│   └── acidic_trace_01.protocol.md     ← executable protocol block
-├── prompts/
-│   └── schema_template.md              ← schema for authoring new glyphs
-├── agents/
-│   └── symbolic_agent.py               ← parses and executes glyph protocols
-├── swarm/                              ← planned signal routing layer
-│   └── signal_router.py
-├── LICENSE                             ← CC BY-NC 4.0
-```
-
----
-
 ## Current Status
 
 - First protocol (`acidic_trace_01`) emitted and executed  
