@@ -59,7 +59,7 @@ For the full philosophical context, visit the [Glyph Protocol Documentation](htt
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/sndphil/glyph-protocol.git](https://github.com/sndphil/glyph-protocol.git)
+    git clone https://github.com/sndphil/glyph-protocol.git
     cd glyph-protocol
     ```
 2.  **Set up a Python virtual environment:**
